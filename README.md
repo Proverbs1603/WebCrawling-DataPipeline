@@ -8,6 +8,7 @@
    | 사용 라이브러리 : selenium<br>
 
   3. Crawling_Lambda_Script.py 실행<br>
+  
     3-1. Crawling_Basic 실행 : [selenium]을 이용한 크롤링<br>
      Crawling_Data Load 실행<br>
     3-2. accommodation_table, accommodation_review_table, accommdation_price_table => parquet 형태로 buffer에 임시 저장<br>

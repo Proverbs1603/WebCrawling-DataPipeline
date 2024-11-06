@@ -15,7 +15,7 @@ def load_basic_data(total_accommodation_df, total_price_df, total_review_df):
     table = pa.Table.from_pandas(total_accommodation_df)
     pq.write_table(table, buffer)
     buffer.seek(0)
-    file_key = date + '_tables' + '/accommodation_Location_table.parquet'
+    file_key = date + '_tables' + '/accommodation_table.parquet'
     s3.upload_fileobj(buffer, bucket_name, file_key)
     
     # Price 데이터프레임 -> parquet 파일 변환 -> s3 업로드

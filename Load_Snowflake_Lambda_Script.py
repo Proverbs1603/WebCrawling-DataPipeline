@@ -1,4 +1,5 @@
 import snowflake.connector
+import analytics_tables_query as atq
 from datetime import datetime
 
 # Snowflake 연결 설정
@@ -56,11 +57,20 @@ try:
         cur.execute(copy_query)
         print(f"{table_name} 테이블로 데이터가 성공적으로 복사되었습니다.")
 
-    #####################################################
-    # Analytics_Tables 스키마 내 테이블 삭제 -> 다시 적재 #
-    #####################################################
+    #############################################
+    # ANALYTICS 스키마 내 테이블 삭제 -> 다시 적재 #
+    #############################################
+    # 스키마 내 모든 테이블 목록 가져오기
+    cur.execute(atq.Analytics_1_query)
+    cur.execute(atq.Analytics_2_query)
+    cur.execute(atq.Analytics_3_query)
+    cur.execute(atq.Analytics_4_query)
+    cur.execute(atq.Analytics_5_query)
+    cur.execute(atq.Analytics_6_query)
+    cur.execute(atq.Analytics_7_query)
+    cur.execute(atq.Analytics_8_query)
+    cur.execute(atq.Analytics_9_query)
     
-
 finally:
     # 커서 및 연결 닫기
     cur.close()

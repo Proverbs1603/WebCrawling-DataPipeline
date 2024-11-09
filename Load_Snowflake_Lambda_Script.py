@@ -5,8 +5,8 @@ from datetime import datetime
 # Snowflake 연결 설정
 ctx = snowflake.connector.connect(
     user='ehdgml7755',
-    password='Dnflsk1!',
-    account='uiqmasv-qub95347'
+    password='',
+    account=''
 )
 
 # 오늘 날짜를 'YYYY-MM-DD' 형식으로 가져오기
@@ -46,8 +46,8 @@ try:
         COPY INTO PROJECT2.RAW_DATA.{table_name}
         FROM 's3://accommodation.table.bucket/{parquet_file}'
         CREDENTIALS = (
-            AWS_KEY_ID = 'AKIA46ZDFAAYUKP4JK6H',
-            AWS_SECRET_KEY = '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'
+            AWS_KEY_ID = '',
+            AWS_SECRET_KEY = ''
         )
         FILE_FORMAT = (TYPE = 'PARQUET')
         MATCH_BY_COLUMN_NAME = CASE_INSENSITIVE;

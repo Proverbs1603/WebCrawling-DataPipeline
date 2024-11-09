@@ -6,7 +6,7 @@ import io
 import datetime
 
 def load_basic_data(total_accommodation_df, total_price_df, total_review_df):
-    s3 = boto3.client('s3', aws_access_key_id='AKIA46ZDFAAYUKP4JK6H', aws_secret_access_key='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')
+    s3 = boto3.client('s3', aws_access_key_id='', aws_secret_access_key='')
     date = datetime.datetime.now().strftime("%Y-%m-%d")
     bucket_name = 'accommodation.table.bucket'
     
@@ -37,7 +37,7 @@ def load_basic_data(total_accommodation_df, total_price_df, total_review_df):
     return None
 
 def load_detail_data(Location_df, Facilities_df):
-    s3 = boto3.client('s3', aws_access_key_id='AKIA46ZDFAAYUKP4JK6H', aws_secret_access_key='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')
+    s3 = boto3.client('s3', aws_access_key_id='', aws_secret_access_key='')
     date = datetime.datetime.now().strftime("%Y-%m-%d")
     bucket_name = 'accommodation.table.bucket'
     

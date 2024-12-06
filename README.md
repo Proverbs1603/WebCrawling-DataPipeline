@@ -21,9 +21,9 @@
 
 # **Automated Data Pipeline with AWS Lambda, EventBridge, S3, Snowflake, and Preset**
 
-> **A modern and automated solution for web data scraping, processing, warehousing, and visualization.**
+![image](https://github.com/user-attachments/assets/82f7e334-3467-430f-822d-c43ce0a2a8dd)
 
----
+
 
 ## 📖 **Overview**
 

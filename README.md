@@ -1,31 +1,61 @@
-# Crawling_Script
+# **Automated Data Pipeline with AWS Lambda, EventBridge, S3, Snowflake, and Preset**
 
-## Crawling 실행 순서
+> **A modern and automated solution for web data scraping, processing, warehousing, and visualization.**
 
-### 1. Event Bridge를 통한 (Cron-tab : 매주 월요일 00:00:10) Event 발생
+---
 
-### 2. Lambda (Crawling_Lambda)<br>
-      | 사용 라이브러리 : selenium<br>
+## 📖 **Overview**
 
-### 3. Crawling_Lambda_Script.py 실행<br>
+This repository contains an automated data pipeline using:
+- **AWS EventBridge**: Scheduled triggering of tasks.
+- **AWS Lambda**: Execution of web scraping and data transformation.
+- **AWS S3**: Intermediate storage of processed data in **Parquet format**.
+- **Snowflake**: Data warehousing for advanced analytics and reporting.
+- **Preset (Apache Superset)**: Interactive dashboards for visualization of processed data.
 
-#### 3-1. Crawling_Basic 실행 : [selenium]을 이용한 크롤링<br>
+---
 
-#### Crawling_Data Load 실행<br>
-- accommodation_table, accommodation_review_table, accommdation_price_table => parquet 형태로 buffer에 임시 저장<br><br>
-- buffer : parquet 데이터 => S3 UPLOAD<br><br>
-- Crawling_Detail 실행 : [selenium]과 [accommodation_table.accommodation_ID] 을 이용한 크롤링<br>
+## 📅 **Crawling Execution Flow**
 
-#### Crawling_Data Load 실행<br>
-- accommodation_Location_table, accommodation_Facilities_table<br><br>
-- buffer : parquet 데이터 => S3 UPLOAD<br>
+### **1. Event Trigger (AWS EventBridge)**
+- **Schedule**: Every Monday at `00:00:10` (Cron-tab).
 
-### 4. 적재 완료시, Data_Load_Snowflake<br>
-| 사용 라이브러리<br> : snowflake.connector
+### **2. Lambda Execution**
+- **Function**: `Crawling_Lambda`
+- **Library Used**: `selenium`
 
-- S3/~~.parquet => snowflake.project2.RAW_DATA
+### **3. Crawling Workflow**
+#### **3-1. Crawling_Basic Execution**
+- **Purpose**: Extract basic data using `selenium`.
+- **Data Extracted**:
+  - `accommodation_table`
+  - `accommodation_review_table`
+  - `accommodation_price_table`
+- **Data Processing**:
+  - Data is saved in **Parquet format** to a temporary buffer.
+  - Parquet files are uploaded to **S3**.
 
-- snowflake.project2.RAW_DATA => snowflake.project2.Analytics_tables
+#### **3-2. Crawling_Detail Execution**
+- **Purpose**: Perform detailed crawling using `accommodation_table.accommodation_ID`.
+- **Additional Data Extracted**:
+  - `accommodation_Location_table`
+  - `accommodation_Facilities_table`
+- **Data Processing**:
+  - Data is saved in **Parquet format** and uploaded to **S3**.
+
+### **4. Data Loading to Snowflake**
+- **Library Used**: `snowflake.connector`
+- **Workflow**:
+  1. **S3 Parquet data → snowflake.project2.RAW_DATA**
+  2. **RAW_DATA → snowflake.project2.Analytics_tables**
+
+### **5. Data Visualization with Preset**
+- **Visualization Tool**: Preset (Apache Superset).
+- **Purpose**: Create interactive dashboards and visualizations for:
+  - Accommodation trends.
+  - Review sentiment analysis.
+  - Price comparisons and more.
+
 
 ---
 
@@ -47,18 +77,19 @@
 
 2. Lambda 구성
 ![alt text](./Lambda.png)
+
 [Trigger : Event Bridge] -> [Lambda : Crawling_Lambda_Script.py] => [이전 성공 시 : python Load_Snowflake_Lambda_Script.py]
 
 ---
-# 필수 Library 버전
-- beautifulsoup4==4.12.3
 
-- selenium==4.26.1
+## 🔧 **Required Libraries and Versions**
 
-- boto3==1.35.54
-
-- pandas==2.0.3
-
-- snowflake-connector-python==3.12.3
-
-- snowflake-sqlalchemy==1.6.1
+| **Library**                   | **Version**    |
+|--------------------------------|----------------|
+| `beautifulsoup4`              | 4.12.3         |
+| `selenium`                    | 4.26.1         |
+| `boto3`                       | 1.35.54        |
+| `pandas`                      | 2.0.3          |
+| `snowflake-connector-python`  | 3.12.3         |
+| `snowflake-sqlalchemy`        | 1.6.1          |
+| `apache-superset`             | Latest         |

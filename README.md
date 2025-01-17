@@ -1,3 +1,43 @@
+<img width="601" alt="image" src="https://github.com/user-attachments/assets/7995c4bb-dbd8-4dbb-9e5f-5b91de66c0ee" />
+
+<img width="599" alt="image" src="https://github.com/user-attachments/assets/b9b75855-81ca-4bae-acad-b2b6cb6db674" />
+
+<img width="603" alt="image" src="https://github.com/user-attachments/assets/d2b175bd-f657-4879-9f0c-064ae782e651" />
+
+<img width="603" alt="image" src="https://github.com/user-attachments/assets/224e8676-b2a3-4053-9edc-5421b6a85998" />
+
+<img width="603" alt="image" src="https://github.com/user-attachments/assets/7c28aeca-d268-4060-b11e-5b6d15c068ac" />
+
+<img width="605" alt="image" src="https://github.com/user-attachments/assets/0df70ef7-85f3-4f14-b74c-418fb14f9b3e" />
+
+<img width="602" alt="image" src="https://github.com/user-attachments/assets/3b70e7b7-eadd-4f1c-8075-b77b7237e1a7" />
+
+<img width="605" alt="image" src="https://github.com/user-attachments/assets/9a43745c-918a-40cd-9e51-071805fe3d8c" />
+
+<img width="606" alt="image" src="https://github.com/user-attachments/assets/2f8507c7-356b-437b-9d41-e8e27527af1a" />
+
+<img width="604" alt="image" src="https://github.com/user-attachments/assets/ce96bea1-7ed5-45c6-9e9d-a2ef0c9907f8" />
+
+<img width="602" alt="image" src="https://github.com/user-attachments/assets/a36c09ae-4e3d-44d6-95ef-b7e7197446be" />
+
+<img width="602" alt="image" src="https://github.com/user-attachments/assets/8c024f56-aa75-4384-aa6f-933581bac4b0" />
+
+<img width="604" alt="image" src="https://github.com/user-attachments/assets/09e70c3b-a44f-47be-9bce-322c1438a185" />
+
+<img width="604" alt="image" src="https://github.com/user-attachments/assets/3d51e936-7634-4325-859d-9b1ad414fc37" />
+
+<img width="603" alt="image" src="https://github.com/user-attachments/assets/39b25994-4722-4bc1-8773-fe4c92f3c076" />
+
+<img width="603" alt="image" src="https://github.com/user-attachments/assets/786da6f4-95f2-432d-8cc0-0848dbdf411b" />
+
+<img width="605" alt="image" src="https://github.com/user-attachments/assets/89e9eb76-4625-42d8-8853-dee232471389" />
+
+<img width="989" alt="image" src="https://github.com/user-attachments/assets/f88a49bf-99e7-4e72-b95b-e70d32d703f3" />
+
+<img width="991" alt="image" src="https://github.com/user-attachments/assets/751f6824-9509-4f0e-8af9-405ae98a57a4" />
+
+---
+
 ## **프로젝트 개요**
 
 본 프로젝트는 **지역별, 유형별, 날짜별 변화하는 숙박업소(여기어때)의 데이터를 자동으로 수집, 저장, 분석, 및 시각화**하는 데이터 파이프라인 구축을 목표로 진행되었습니다. 주기적으로 데이터를 업데이트하고, 시각화 대시보드를 통해 국내 숙박업에 대한 다양한 인사이트를 제공하고자 하였습니다. 이러한 목적으로 데이터 수집, 저장, 분석, 시각화까지 다양한 기술들을 활용하였습니다.
